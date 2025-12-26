@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hostal La Maison — Tarifas del Día</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Hostal La Maison</h1>
+        <p class="tagline">Tarifas del Día — Reserva rápida y disponibilidad en tiempo real</p>
+      </div>
+      <div class="controls">
+        <label for="currency" class="sr-only">Seleccionar moneda</label>
+        <select id="currency" aria-label="Selector de moneda">
+          <option value="CLP">CLP — Pesos</option>
+          <option value="USD">USD — Dólares</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section aria-labelledby="rates-title" class="rates-section">
+      <div class="section-header">
+        <h2 id="rates-title">Tarifas del Día</h2>
+        <p class="section-desc">Precios dinámicos según disponibilidad. Cambia la moneda arriba para convertir automáticamente.</p>
+      </div>
+
+      <div id="rates-grid" class="rates-grid" role="list">
+        <!-- Las tarjetas se generan dinámicamente desde script.js -->
+      </div>
+
+      <div class="legend">
+        <span class="legend-item"><span class="badge high"></span> Alta</span>
+        <span class="legend-item"><span class="badge low"></span> Baja</span>
+        <span class="legend-item"><span class="badge soldout"></span> Agotado</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© Hostal La Maison — Diseño boutique. Datos y precios editables en <code>script.js</code></small>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
